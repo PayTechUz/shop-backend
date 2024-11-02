@@ -44,7 +44,7 @@ Pay link is a simple interface that provides pay-link functionality.
    ```sh
    cp .env-sample .env
    ```
-6. Run tests and the app:
+6. Run:
    ```sh
    python3 manage.py migrate
    python3 manage.py runserver
