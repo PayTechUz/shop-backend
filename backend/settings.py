@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 
 PAYME_ID = env.str("PAYME_ID")
 PAYME_KEY = env.str("PAYME_KEY")
-PAYME_ACCOUNT_FIELD = "id"
+PAYME_ACCOUNT_FIELD = "order_id"  # maybe id key
 PAYME_AMOUNT_FIELD = "total_cost"
 PAYME_ACCOUNT_MODEL = "order.models.Order"
 PAYME_ONE_TIME_PAYMENT = True
