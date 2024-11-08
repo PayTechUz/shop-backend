@@ -38,7 +38,7 @@ Pay link is a simple interface that provides pay-link functionality.
    ```
 4. Install dependencies:
    ```sh
-   pip3 install -r requirements.txt
+   pip install -r requirements.txt
    ```
 5. Set your environment variables:
    ```sh
@@ -46,6 +46,6 @@ Pay link is a simple interface that provides pay-link functionality.
    ```
 6. Run:
    ```sh
-   python3 manage.py migrate
-   python3 manage.py runserver
+   python manage.py migrate
+   python manage.py runserver
    ```
