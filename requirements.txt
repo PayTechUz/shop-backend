@@ -4,3 +4,4 @@ environs==11.0.0
 payme-pkg==3.0.6
 python-dotenv==1.0.1
 requests==2.32.3
+django-unfold==0.40.0
