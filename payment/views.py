@@ -16,14 +16,15 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
 
         result = response.CheckPerformTransaction(allow=True)
 
+        # you can use dynamic parameters it simple example that's why hardcoded
         item = response.Item(
-            discount="10000",
+            discount=10000,
             title="Помидоры",
-            price="505000",
+            price=505000,
             count=1,
             code="00702001001000001",
-            units="241092",
-            vat_percent="15",
+            units=241092,
+            vat_percent=15,
             package_code="123456"
         )
         result.add_item(item)
