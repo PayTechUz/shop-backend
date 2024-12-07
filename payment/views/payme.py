@@ -5,6 +5,7 @@ from payme.models import PaymeTransactions
 from order.models import Order
 
 
+# pylint: disable=E1101
 class PaymeCallBackAPIView(PaymeWebHookAPIView):
     """
     A view to handle Payme Webhook API calls.
@@ -38,7 +39,6 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
             transaction_id=params["id"]
         )
 
-        # pylint: disable=E1101
         order = Order.objects.get(id=transaction.account.id)
         order.is_paid = True
         order.save()
@@ -52,7 +52,6 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
         )
 
         if transaction.state == PaymeTransactions.CANCELED:
-            # pylint: disable=E1101
             order = Order.objects.get(id=transaction.account.id)
             order.is_paid = False
             order.save()

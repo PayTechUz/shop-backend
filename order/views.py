@@ -2,12 +2,20 @@ from rest_framework import views
 from rest_framework import response
 
 from payme import Payme
+from click_up import ClickUp
 
 from backend import settings
 from order.serializer import OrderSerializer
 
 
-payme = Payme(payme_id=settings.PAYME_ID)
+payme = Payme(
+    payme_id=settings.PAYME_ID
+)
+
+click_up = ClickUp(
+    service_id=settings.CLICK_SERVICE_ID,
+    merchant_id=settings.CLICK_MERCHANT_ID
+)
 
 
 class OrderCreate(views.APIView):
@@ -31,6 +39,14 @@ class OrderCreate(views.APIView):
 
         if serializer.data["payment_method"] == "payme":
             payment_link = payme.initializer.generate_pay_link(
+                id=serializer.data["id"],
+                amount=serializer.data["total_cost"],
+                return_url="https://uzum.uz"
+            )
+            result["payment_link"] = payment_link
+
+        elif serializer.data["payment_method"] == "click":
+            payment_link = click_up.initializer.generate_pay_link(
                 id=serializer.data["id"],
                 amount=serializer.data["total_cost"],
                 return_url="https://uzum.uz"

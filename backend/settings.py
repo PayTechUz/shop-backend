@@ -27,16 +27,27 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     'payme',
+    'click_up',
+
     'order',
     'payment',
 ]
 
+
+# payme settings
 PAYME_ID = env.str("PAYME_ID")
 PAYME_KEY = env.str("PAYME_KEY")
 PAYME_ACCOUNT_FIELD = "order_id"  # maybe id key
 PAYME_AMOUNT_FIELD = "total_cost"
 PAYME_ACCOUNT_MODEL = "order.models.Order"
 PAYME_ONE_TIME_PAYMENT = True
+
+# click settings
+CLICK_SERVICE_ID = env.str("CLICK_SERVICE_ID")
+CLICK_MERCHANT_ID = env.str("CLICK_MERCHANT_ID")
+CLICK_SECRET_KEY = env.str("CLICK_SECRET_KEY")
+CLICK_ACCOUNT_MODEL = "order.models.Order"
+CLICK_AMOUNT_FIELD = "total_cost"
 
 
 MIDDLEWARE = [
