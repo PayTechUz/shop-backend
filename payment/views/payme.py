@@ -39,7 +39,7 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
             transaction_id=params["id"]
         )
 
-        order = Order.objects.get(id=transaction.account.id)
+        order = Order.objects.get(id=transaction.account_id)
         order.is_paid = True
         order.save()
 
@@ -52,6 +52,6 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
         )
 
         if transaction.state == PaymeTransactions.CANCELED:
-            order = Order.objects.get(id=transaction.account.id)
+            order = Order.objects.get(id=transaction.account_id)
             order.is_paid = False
             order.save()

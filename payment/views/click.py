@@ -17,7 +17,7 @@ class ClickWebhookAPIView(ClickWebhook):
         transaction = ClickTransaction.objects.get(
             transaction_id=params.click_trans_id
         )
-        order = Order.objects.get(id=transaction.account.id)
+        order = Order.objects.get(id=transaction.account_id)
         order.is_paid = True
         order.save()
 
@@ -30,6 +30,6 @@ class ClickWebhookAPIView(ClickWebhook):
         )
 
         if transaction.state == ClickTransaction.CANCELLED:
-            order = Order.objects.get(id=transaction.account.id)
+            order = Order.objects.get(id=transaction.account_id)
             order.is_paid = False
             order.save()

@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "d2746925-1f90-4f1a-9f74-b88d64239142",
+		"name": "shop-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17469950",
+		"_collection_link": "https://solar-eclipse-316690.postman.co/workspace/paytechuz~ebf02839-9e96-4073-ae2f-6161136a5127/collection/17469950-d2746925-1f90-4f1a-9f74-b88d64239142?action=share&source=collection_link&creator=17469950"
+	},
+	"item": [
+		{
+			"name": "order-create-by-click",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_name\": \"Akbarov Akmaljon\",\n    \"address\": \"Farg'ona shahar\",\n    \"total_cost\": 1000,\n    \"payment_method\": \"click\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/order/create/"
+			},
+			"response": []
+		},
+		{
+			"name": "order-create-by-payme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_name\": \"Akbarov Muhammadali\",\n    \"address\": \"Toshkent shahar, Chilanzor metro.\",\n    \"total_cost\": 1000,\n    \"payment_method\": \"payme\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/order/create/"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
