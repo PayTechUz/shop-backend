@@ -1,8 +1,8 @@
-# Payme One-Time Payment Implementation (Однаразовый платеж)
+# Payme/Click One-Time Payment Implementation (Однаразовый платеж)
 
 [Support Group - Telegram](https://t.me/+bYouuOlqt1c3NmYy)  
 <!-- [YouTube - Watch Video](https://youtu.be/r2RO3kJVP7g)   -->
-This MVP project helps to implement [payme-pkg](https://github.com/PayTechUz/payme-pkg).
+This MVP project helps to implement [payme-pkg](https://github.com/PayTechUz/payme-pkg) and [click-pkg](https://github.com/PayTechUz/click-pkg).
 
 <!-- [![Watch Video](https://i.postimg.cc/5NRRSHXp/homemuhammadali-Downloads-Telegram-Desktop-Closer-Li-QWYD-No-Copyright-Music-Audio-Library-Music-m4a.gif)](https://youtu.be/r2RO3kJVP7g) -->
 
