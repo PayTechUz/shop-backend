@@ -49,6 +49,7 @@ CLICK_SECRET_KEY = env.str("CLICK_SECRET_KEY")
 CLICK_ACCOUNT_MODEL = "order.models.Order"
 CLICK_AMOUNT_FIELD = "total_cost"
 
+# CLICK_COMMISSION_PERCENT = 1
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
