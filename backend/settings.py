@@ -33,11 +33,12 @@ INSTALLED_APPS = [
     'payment',
 ]
 
+PAYTECH_API_KEY = "your paytech api key"  # contact with @muhammadali_me for getting api key
 
 # payme settings
 PAYME_ID = env.str("PAYME_ID")
 PAYME_KEY = env.str("PAYME_KEY")
-PAYME_ACCOUNT_FIELD = "order_id"  # maybe id key
+PAYME_ACCOUNT_FIELD = "id"  # maybe id key
 PAYME_AMOUNT_FIELD = "total_cost"
 PAYME_ACCOUNT_MODEL = "order.models.Order"
 PAYME_ONE_TIME_PAYMENT = True
