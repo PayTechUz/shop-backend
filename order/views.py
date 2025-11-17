@@ -9,7 +9,8 @@ from order.serializer import OrderSerializer
 
 
 payme = Payme(
-    payme_id=settings.PAYME_ID
+    payme_id=settings.PAYME_ID,
+    license_api_key=settings.PAYTECH_API_KEY
 )
 
 click_up = ClickUp(
